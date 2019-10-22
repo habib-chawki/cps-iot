@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="result"> Result will be displayed here ... </h1>
+    <script type="text/javascript">
+        let ws = new WebSocket("ws://192.168.1.223:8888");
+        
+        ws.addEventListener('open', function(event){
+           alert("opened"); 
+        });
+        
+        ws.addEventListener('message', function (event) {
+            alert('Message from server ', event.data);
+        });
+    </script>
+       
+</body>
+</html>
